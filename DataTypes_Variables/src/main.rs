@@ -41,4 +41,47 @@ fn main() {
         println!("Value of x in the inner block is: {}",x);
     }
     println!("Value of x outside the block is: {}",x);
+
+    //isize and usize type variable size depends upon the computer architecture which you are working on.
+
+    //64 bits if your computer is 64-bit architecture and 32 if your computer is 32-bit architecture.
+
+    // in the declaration of any number we can also use "_" between them to make them easier to read.
+    //For example: 1_000 is same as 1000.
+
+    let ex: isize = 10_000;
+    println!("Value of ex is: {}",ex);  //output will be 10000 only.
+
+    //Numeric operators
+
+    let sum = 1+2;
+
+    let difference = 345.2 - 34.8;
+
+    let multiplicaton = 3 * 9;
+
+    let division = 25/5;
+
+    let remainder = 21 % 4;
+
+    println!("Sum of two numbers is: {}",sum);
+    println!("Difference of two numbers is: {}",difference);
+    println!("Multiplication of two numbers is: {}",multiplicaton);
+    println!("Division of two numbers is: {}",division);
+    println!("Remainder of two numbers is: {}",remainder);
+
+    //Boolean 
+
+    let t:bool = true;
+    let f:bool = false; //with explict type annotation
+
+    //the above declaration will give waring
+
+    // Character type
+
+    let ch: char = 'a';
+    let emoji = '😻';
+    println!("Value of ch is: {}",ch);
+    println!("Value of emoji is: {}",emoji);
+
 }
