@@ -72,10 +72,18 @@ fn main() {
 
     //Boolean 
 
-    let t:bool = true;
-    let f:bool = false; //with explict type annotation
+    // let t:bool = true;
+    // let f:bool = false; //with explict type annotation
 
-    //the above declaration will give waring
+    //the above declaration will give warning
+
+    let _t:bool = true;
+    let _f:bool = false;
+
+    //the above decleration is true if I want to declare and dont want to use then use "_" in starting to prevent warning.
+    // println!("{}", t);
+    // println!("{}", f);
+
 
     // Character type
 
@@ -84,4 +92,18 @@ fn main() {
     println!("Value of ch is: {}",ch);
     println!("Value of emoji is: {}",emoji);
 
+
+    // Tuple type
+
+    // tuple have fixed size , cannot increase or decrease after the decleration.
+    // grouping togther the number of values and variety of types into one compound type.
+
+    let tup: (i8, f32, u32) = (32, 45.89, 200);
+    // let (p, q, r) = tup;
+
+    println!("Value of postion 1 in tuple: {}",tup.0); // positon starts form 0 itself same as C and C++ 
+
+    println!("Value of postion 2 in tuple: {}",tup.1);
+    
+    println!("Value of postion 3 in tuple: {}",tup.2);
 }
