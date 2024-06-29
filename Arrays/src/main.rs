@@ -32,4 +32,39 @@ fn main() {
     // println!("The value at index {} is: {}",index,element);
 
     // The above code will throung the runtime error when we write the index out of range
+
+    traverse();
+    search_element();
+}
+
+fn traverse(){
+    // for loop to traverse the array
+    let a = [1,2,3,4];
+    for i in a.iter(){
+        print!("{} ",i);
+    }
+}
+
+fn search_element(){
+    //searching the element in the array
+    let a = [1,2,3,4];
+    let mut flag = 0;
+    let mut index = 0;
+    println!("\nEnter the element to search.");
+    let mut element = String::new();
+    io::stdin().read_line(&mut element).expect("Failed to read line.");
+    let element: i32 = element.trim().parse().expect("Element entered was not found.");
+    for i in 0..a.len(){
+        if a[i] == element{
+            flag = 1;
+            index = i;
+            break;
+        }
+    }
+    if flag == 1{
+        println!("Element found at index: {}",index);
+    }
+    else{
+        println!("Element not found.");
+    }
 }
