@@ -35,7 +35,50 @@ fn main() {
 
     //Loops
 
-    loop{
-        println!("loop statement press ctrl+c to cancel.")
+    // loop{
+    //     println!("loop statement press ctrl+c to cancel.")
+    // }
+
+    loop_condition();
+    nested_loop();
+}
+
+
+fn loop_condition(){
+    
+    let mut count=0;
+    // this loop will run until the value of count will reach 10.
+    let result = loop {
+        count+=1;  // this will keep incrementing the value of the count until the loop will run
+
+        if count==10{  // when the value of count will reach 10 the the loop will break and return multiplier of 2.
+            break count*2;
+        }
+    };
+
+    println!("Value after the running the loop conditon: {}",result);
+}
+
+fn nested_loop(){
+    //Nested loop
+    
+    let mut count = 0;
+    'counting_up: loop{
+        println!("count = {count}");
+        let mut remaning = 10;
+
+        loop{
+            println!("remaning = {remaning}");
+
+            if remaning ==9{
+                break;
+            }
+            if count==2{
+                break 'counting_up;
+            }
+            remaning -=1;
+        }
+        count+=1;
     }
+    println!("end count = {count}");
 }
