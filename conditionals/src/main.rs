@@ -41,6 +41,8 @@ fn main() {
 
     loop_condition();
     nested_loop();
+    while_loop();
+    for_loop();
 }
 
 
@@ -81,4 +83,23 @@ fn nested_loop(){
         count+=1;
     }
     println!("end count = {count}");
+}
+
+// While loop
+fn while_loop(){
+    let mut count = 0;
+    while count<5{
+        println!("count = {count}");
+        count+=1;
+    }
+}
+
+
+// For loop
+fn for_loop(){
+    let a = [10, 20, 30, 40, 50];
+
+    for element in a {
+        println!("the value is: {element}");
+    }
 }
